@@ -1,95 +1,185 @@
-/* 1. Cấu hình nền và căn giữa trang web */
+/* ==========================================================
+   1. QUY TẮC CHUNG: CHỮ THƯỜNG MẶC ĐỊNH, CHỈ BÔI ĐẬM TIÊU ĐỀ
+   ========================================================== */
+body, p, a, li, span, td, div {
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+    font-weight: bold;
+    color: #0f172a;
+}
+
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    max-width: 800px;
-    margin: 40px auto; /* Căn giữa nội dung thay vì bị lệch trái */
-    padding: 0 20px;
-    background: #f1f5f9; /* Nền xám xanh dịu mắt */
+    background-color: #f8fafc;
     color: #334155;
+    margin: 0;
+    padding: 30px 15px;
     line-height: 1.6;
 }
 
-/* 2. Tiêu đề H1 có thanh gạch màu trang trí */
-h1 {
-    color: #0f172a;
-    font-size: 2rem;
+/* ==========================================================
+   2. TRANG CHỦ & TRANG BÀI TẬP NHÓM
+   ========================================================== */
+.page-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.card-box {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
-    position: relative;
-    padding-bottom: 12px;
+    border: 1px solid #e2e8f0;
 }
 
-/* Đường gạch trang trí kết hợp màu Xanh - Cam */
-h1::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 70px;
-    height: 4px;
-    background: linear-gradient(90deg, #007BFF, #ff6600);
-    border-radius: 2px;
-}
-
-/* 3. Danh sách mục (.task-list) */
 .task-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-bottom: 30px;
 }
 
 .task-list a {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 14px 20px;
+    align-items: center;
+    padding: 14px 18px;
     background: #ffffff;
-    border-radius: 10px;
+    border-radius: 8px;
     text-decoration: none;
     color: #1e293b;
-    font-weight: 500;
-    border-left: 4px solid #007BFF; /* Viền điểm nhấn bên trái */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Đổ bóng nhẹ dạng thẻ Card */
+    border-left: 4px solid #0284c7;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
     transition: all 0.25s ease;
 }
 
-/* Tự động thêm biểu tượng mũi tên ở cuối mỗi ô */
-.task-list a::after {
-    content: '→';
-    font-size: 1.1rem;
-    opacity: 0.5;
-    transition: transform 0.25s ease;
-}
-
-/* Hiệu ứng khi di chuột vào ô danh sách */
 .task-list a:hover {
-    background: #007BFF;
+    background: #0284c7;
     color: #ffffff;
-    border-left-color: #0056b3;
-    transform: translateX(6px); /* Nhích nhẹ ô sang phải */
-    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.25);
+    transform: translateX(5px);
 }
 
-.task-list a:hover::after {
-    opacity: 1;
-    transform: translateX(4px); /* Mũi tên nhích nhẹ theo */
-}
-
-/* 4. Nút bấm Nổi bật (.btn) */
+/* Nút bấm tổng quát (.btn) */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
-    background: linear-gradient(135deg, #ff6600, #ff8533); /* Gradient màu cam */
-    color: white;
+    padding: 10px 20px;
+    background-color: #0284c7;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 8px;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);
-    transition: all 0.25s ease;
+    transition: background-color 0.2s ease;
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #e65c00, #cc5200);
-    transform: translateY(-2px); /* Bay nhẹ lên trên */
-    box-shadow: 0 6px 16px rgba(255, 102, 0, 0.35);
+    background-color: #0369a1;
+}
+
+/* ==========================================================
+   3. TRANG GIỚI THIỆU THÀNH VIÊN NHÓM (.about-page)
+   ========================================================== */
+.member-card {
+    display: flex;
+    gap: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.member-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e2e8f0;
+}
+
+/* ==========================================================
+   4. TRANG CÁ NHÂN (tasks/lantth/index.html)
+   ========================================================== */
+.profile-container {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.profile-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #0284c7;
+    margin-bottom: 12px;
+}
+
+.profile-header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.profile-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.profile-section h2 {
+    font-size: 1.15rem;
+    color: #0284c7;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px 16px;
+}
+
+.info-grid span {
+    color: #64748b;
+}
+
+.profile-section ul {
+    padding-left: 20px;
+    margin: 6px 0;
+}
+
+.profile-section li {
+    margin-bottom: 6px;
+}
+
+/* Nút quay lại trang chủ */
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #0284c7;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
 }

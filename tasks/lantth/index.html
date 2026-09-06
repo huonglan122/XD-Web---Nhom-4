@@ -2,34 +2,56 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trần Thị Hương Lan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Thị Hương Lan - Trang Cá Nhân</title>
+    <!-- Liên kết tới file CSS dùng chung -->
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 
-    <h1>Trần Thị Hương Lan</h1>
-     <img src="IMG_1419.JPG" alt="Mô tả ảnh" width="200">
-    
-    <h2>Thông tin cá nhân</h2>
-    <p>MSSV: 24108612</p>
-    <p>Lớp: FIDT3.2410.2</p> 
-    <p>Ngành: Thương mại điện tử</p> 
-    <p>Ngày sinh: 12/02/2006</p>
-    <p>Giới tính: Nữ</p>
+    <main class="profile-container">
+        <!-- Nút quay lại trang chủ -->
+        <a href="../../index.html" class="back-link">&larr; Quay lại trang chủ</a>
 
-    <h3>Sở thích</h3>
-    <ul>
-        <li>Đọc truyện</li>
-        <li>Nghe nhạc</li>
-        <li>Chơi game</li>
-    </ul>
+        <div class="profile-card">
+            <!-- Phần hình ảnh & tên -->
+            <header class="profile-header">
+                <img src="IMG_1419.JPG" alt="Trần Thị Hương Lan" class="profile-avatar">
+                <h1>Trần Thị Hương Lan</h1>
+            </header>
 
-    <h3>Sở trường</h3>
-    <ul>
-        <li>Biết đánh đàn</li>
-        <li>Trong học tập hoàn thành tốt công việc được giao<li>
-    <ul>
+            <!-- Thông tin cá nhân -->
+            <section class="profile-section">
+                <h2>Thông tin cá nhân</h2>
+                <div class="info-grid">
+                    <p><span>MSSV:</span> 24108612</p>
+                    <p><span>Lớp:</span> FIDT3.2410.2</p> 
+                    <p><span>Ngành:</span> Thương mại điện tử</p> 
+                    <p><span>Ngày sinh:</span> 12/02/2006</p>
+                    <p><span>Giới tính:</span> Nữ</p>
+                </div>
+            </section>
 
-<p><a href="../../index.html">← Quay lại trang chủ</a></p>
+            <!-- Sở thích -->
+            <section class="profile-section">
+                <h2>Sở thích</h2>
+                <ul>
+                    <li>Đọc truyện</li>
+                    <li>Nghe nhạc</li>
+                    <li>Chơi game</li>
+                </ul>
+            </section>
+
+            <!-- Sở trường -->
+            <section class="profile-section">
+                <h2>Sở trường</h2>
+                <ul>
+                    <li>Biết đánh đàn</li>
+                    <li>Hoàn thành tốt công việc được giao trong học tập</li>
+                </ul>
+            </section>
+        </div>
+    </main>
 
 </body>
 </html>
