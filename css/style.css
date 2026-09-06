@@ -1,73 +1,95 @@
-/* ==========================================================
-   1. TRANG CHỦ: TÁCH RIÊNG BẰNG HÀNG/KHUNG KHÁC NHAU
-   ========================================================== */
-
-/* Xếp các bài tập cá nhân & bài tập nhóm thành từng dòng riêng biệt */
-.button-group {
-    display: flex;
-    flex-direction: column; /* Xếp dọc từng mục xuống dòng */
-    gap: 14px;              /* Khoảng cách biệt lập giữa các mục */
-}
-
-/* Kiểu dáng từng ô liên kết (không dùng chữ bôi đậm) */
-.btn-item {
-    display: block;
-    padding: 14px 18px;
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    color: #0f172a;
-    text-decoration: none;
-    font-weight: normal;    /* Giữ chữ bình thường, không bôi đậm */
-    transition: all 0.2s ease;
-}
-
-/* Đổi màu nhẹ khi di chuột để nhận biết */
-.btn-item:hover {
-    background-color: #f1f5f9;
-    border-color: #94a3b8;
-}
-
-/* ==========================================================
-   2. TRANG GIỚI THIỆU: TÁCH BIỆT CÁC THÀNH VIÊN
-   ========================================================== */
-
-/* Khung chứa thông tin từng thành viên */
-.member-card {
-    margin-bottom: 50px;       /* Khoảng cách lớn giữa các thành viên */
-    padding-bottom: 30px;      /* Khoảng trống bên dưới nội dung */
-    border-bottom: 1px solid #e2e8f0; /* Đường gạch ngang phân cách nhẹ nhàng */
-}
-
-/* Bỏ đường gạch chân ở thành viên cuối cùng */
-.member-card:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-/* Căn chỉnh các dòng thông tin của từng thành viên */
-.member-card h3 {
-    font-weight: normal;    /* Tiêu đề tên chữ thường/thanh mảnh */
-    font-size: 1.3rem;
-    color: #0f172a;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.member-card p {
-    font-weight: normal;    /* Đảm bảo toàn bộ mô tả, MSSV không bị đậm */
-    line-height: 1.8;       /* Giãn khoảng cách các dòng chữ cho dễ đọc */
+/* 1. Cấu hình nền và căn giữa trang web */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    max-width: 800px;
+    margin: 40px auto; /* Căn giữa nội dung thay vì bị lệch trái */
+    padding: 0 20px;
+    background: #f1f5f9; /* Nền xám xanh dịu mắt */
     color: #334155;
-    margin: 8px 0;
+    line-height: 1.6;
 }
 
-.member-card a {
-    display: inline-block;
-    margin-top: 12px;
-    color: #0284c7;
+/* 2. Tiêu đề H1 có thanh gạch màu trang trí */
+h1 {
+    color: #0f172a;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/* Đường gạch trang trí kết hợp màu Xanh - Cam */
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #007BFF, #ff6600);
+    border-radius: 2px;
+}
+
+/* 3. Danh sách mục (.task-list) */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.task-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: #ffffff;
+    border-radius: 10px;
     text-decoration: none;
+    color: #1e293b;
+    font-weight: 500;
+    border-left: 4px solid #007BFF; /* Viền điểm nhấn bên trái */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Đổ bóng nhẹ dạng thẻ Card */
+    transition: all 0.25s ease;
 }
 
-.member-card a:hover {
-    text-decoration: underline;
+/* Tự động thêm biểu tượng mũi tên ở cuối mỗi ô */
+.task-list a::after {
+    content: '→';
+    font-size: 1.1rem;
+    opacity: 0.5;
+    transition: transform 0.25s ease;
+}
+
+/* Hiệu ứng khi di chuột vào ô danh sách */
+.task-list a:hover {
+    background: #007BFF;
+    color: #ffffff;
+    border-left-color: #0056b3;
+    transform: translateX(6px); /* Nhích nhẹ ô sang phải */
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.25);
+}
+
+.task-list a:hover::after {
+    opacity: 1;
+    transform: translateX(4px); /* Mũi tên nhích nhẹ theo */
+}
+
+/* 4. Nút bấm Nổi bật (.btn) */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff6600, #ff8533); /* Gradient màu cam */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #e65c00, #cc5200);
+    transform: translateY(-2px); /* Bay nhẹ lên trên */
+    box-shadow: 0 6px 16px rgba(255, 102, 0, 0.35);
 }
