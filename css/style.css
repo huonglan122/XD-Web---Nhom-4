@@ -1,103 +1,73 @@
-/* ==========================================
-   1. KIỂU DÁNG CHUNG (Tự động áp dụng cho cả 2 trang)
-   ========================================== */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8fafc;
-    color: #334155;
-    margin: 0;
-    line-height: 1.6;
+/* ==========================================================
+   1. TRANG CHỦ: TÁCH RIÊNG BẰNG HÀNG/KHUNG KHÁC NHAU
+   ========================================================== */
+
+/* Xếp các bài tập cá nhân & bài tập nhóm thành từng dòng riêng biệt */
+.button-group {
+    display: flex;
+    flex-direction: column; /* Xếp dọc từng mục xuống dòng */
+    gap: 14px;              /* Khoảng cách biệt lập giữa các mục */
 }
 
-header {
-    background: #0f172a;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
-    background-color: #1e293b;
-    text-align: center;
-    padding: 10px;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 8px 16px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #38bdf8;
-}
-
-main {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 25px;
+/* Kiểu dáng từng ô liên kết (không dùng chữ bôi đậm) */
+.btn-item {
+    display: block;
+    padding: 14px 18px;
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-/* ==========================================
-   2. TRANG TRÍ RIÊNG CHO TRANG CHỦ (.home-page)
-   ========================================== */
-/* Điểm nhấn viền màu xanh dương phía trên khung nội dung */
-.home-page main {
-    border-top: 5px solid #0284c7;
-}
-
-/* Hình ảnh trên trang chủ có hiệu ứng phóng to nhẹ khi di chuột */
-.home-page main img {
+    border: 1px solid #cbd5e1;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: normal;    /* Giữ chữ bình thường, không bôi đậm */
+    transition: all 0.2s ease;
 }
 
-.home-page main img:hover {
-    transform: scale(1.03);
+/* Đổi màu nhẹ khi di chuột để nhận biết */
+.btn-item:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
 }
 
-/* ==========================================
-   3. TRANG TRÍ RIÊNG CHO TRANG GIỚI THIỆU (.about-page)
-   ========================================== */
-/* Điểm nhấn viền màu xanh lá phía trên khung nội dung */
-.about-page main {
-    border-top: 5px solid #10b981;
-}
+/* ==========================================================
+   2. TRANG GIỚI THIỆU: TÁCH BIỆT CÁC THÀNH VIÊN
+   ========================================================== */
 
-/* Đoạn văn trích dẫn hoặc giới thiệu bản thân được tạo khung làm nổi bật */
-.about-page blockquote, 
-.about-page .intro-box {
-    background-color: #ecfdf5;
-    border-left: 4px solid #10b981;
-    padding: 15px;
-    margin: 20px 0;
-    font-style: italic;
-    color: #065f46;
-}
-/* Khoảng cách biệt lập giữa các thành viên */
+/* Khung chứa thông tin từng thành viên */
 .member-card {
-    margin-bottom: 45px;       /* Đẩy thành viên phía dưới ra xa 45px */
-    padding: 20px;              /* Khoảng trống bên trong khung */
-    background-color: #ffffff;  /* Nền trắng */
-    border-radius: 8px;         /* Bo tròn nhẹ góc khung */
-    border-bottom: 2px solid #e2e8f0; /* Đường gạch ngang phân cách nhạt */
+    margin-bottom: 50px;       /* Khoảng cách lớn giữa các thành viên */
+    padding-bottom: 30px;      /* Khoảng trống bên dưới nội dung */
+    border-bottom: 1px solid #e2e8f0; /* Đường gạch ngang phân cách nhẹ nhàng */
 }
 
-/* Khoảng cách giữa các dòng chữ bên trong từng người */
+/* Bỏ đường gạch chân ở thành viên cuối cùng */
+.member-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Căn chỉnh các dòng thông tin của từng thành viên */
 .member-card h3 {
-    margin-top: 10px;
-    margin-bottom: 8px;
+    font-weight: normal;    /* Tiêu đề tên chữ thường/thanh mảnh */
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .member-card p {
-    margin: 6px 0;             /* Giãn nhẹ dòng MSSV và Mô tả */
+    font-weight: normal;    /* Đảm bảo toàn bộ mô tả, MSSV không bị đậm */
+    line-height: 1.8;       /* Giãn khoảng cách các dòng chữ cho dễ đọc */
+    color: #334155;
+    margin: 8px 0;
 }
 
 .member-card a {
     display: inline-block;
-    margin-top: 10px;          /* Đẩy nút 'Xem trang cá nhân' xuống một chút */
+    margin-top: 12px;
+    color: #0284c7;
+    text-decoration: none;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
 }
