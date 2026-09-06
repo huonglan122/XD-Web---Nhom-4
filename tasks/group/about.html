@@ -2,97 +2,57 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Giới thiệu nhóm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - Nhóm 4</title>
+    <!-- Đường dẫn CSS lùi 2 cấp thư mục -->
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
-<body class="about-page">
+<body>
 
-   <div class="group-header">
-    <h1>Nhóm 4 - Xây dựng ứng dụng Web</h1>
-    <p>Trang tổng hợp thông tin cá nhân và nhiệm vụ của các thành viên trong nhóm.</p>
-   </div>
+    <main class="page-container">
+        <a href="../../index.html" class="back-link">&larr; Quay lại trang chủ</a>
+        <h1>Chi tiết từng thành viên</h1>
 
-    <h2>Danh sách thành viên</h2>
-    <ul>
-        <li>Trần Thị Hương Lan (Nhóm trưởng)</li>
-        <li>Nguyễn Thanh Vân (Thành viên)</li>
-        <li>Phạm Trường Phát (Thành viên)</li>
-        <li>Dương Khắc Huy (Thành viên)</li>
-    </ul>
+        <!-- Thành viên 1 -->
+        <div class="member-card">
+            <img src="../lantth/IMG_1419.JPG" alt="Trần Thị Hương Lan">
+            <div class="member-info">
+                <h3>Trần Thị Hương Lan</h3>
+                <p><span>MSSV:</span> 24108612</p>
+                <p><span>Mô tả:</span> Thích nghe nhạc, đọc truyện, biết đánh đàn.</p>
+                <a href="../lantth/index.html" class="btn-link">Xem trang cá nhân &rarr;</a>
+            </div>
+        </div>
 
-    <h2>Thông tin thành viên</h2>
+        <!-- Thành viên 2 -->
+        <div class="member-card">
+            <img src="../vannt/avatar.jpg" alt="Nguyễn Thanh Vân">
+            <div class="member-info">
+                <h3>Nguyễn Thanh Vân</h3>
+                <p><span>MSSV:</span> 24106689</p>
+                <p><span>Mô tả:</span> Có trách nhiệm, yêu thích thể thao và du lịch.</p>
+                <a href="../vannt/index.html" class="btn-link">Xem trang cá nhân &rarr;</a>
+            </div>
+        </div>
 
-    <div>
-        <img src="../lantth/IMG_1419.JPG" alt="Trần Thị Hương Lan" width="150">
-        <h3>Trần Thị Hương Lan</h3>
-        <p><b>Thích nghe nhạc, đọc truyện, biết đánh đàn</p>
-        <a href="../lantth/index.html">Xem trang cá nhân →</a>
-    </div>
+        <!-- Thành viên 3 -->
+        <div class="member-card">
+            <div class="member-info">
+                <h3>Phạm Trường Phát</h3>
+                <p>Hiện chưa có thông tin đóng góp cho dự án này.</p>
+                <a href="../phatpt/index.html" class="btn-link">Xem trang cá nhân &rarr;</a>
+            </div>
+        </div>
 
-    <div>
-        <img src="../vannt/avatar.jpg" alt="Nguyễn Thanh Vân" width="150">
-        <h3>Nguyễn Thanh Vân</h3>
-        <p><b>Có trách nhiệm, yêu thích thể thao và du lịch.</p>
-        <a href="../vannt/index.html">Xem trang cá nhân →</a>
-    </div>
-
-    <div class="member-card">
-        <h3>Phạm Trường Phát</h3>
-        <p><b>Hiện chưa có thông tin đóng góp cho dự án này.</p>
-        <p><a href="#">Trang cá nhân (Chưa có)</a></p>
-    </div>
-
-   <div class="member-card">
-        <h3>Dương Khắc Huy</h3>
-        <p><b>Hiện chưa có thông tin đóng góp cho dự án này.</p>
-        <p><a href="#">Trang cá nhân (Chưa có)</a></p>
-    </div>
-
-    <h2>Bảng phân công công việc</h2>
-    <table border="1" cellpadding="8" cellspacing="0">
-        <thead>
-            <tr>
-                <th>Tên thành viên</th>
-                <th>Nhiệm vụ phụ trách</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Trần Thị Hương Lan</td>
-                <td>Phụ trách toàn bộ quy trình thực hiện bài tập nhóm và bài tập cá nhân.</td>
-            </tr>
-            <tr>
-                <td>Nguyễn Thanh Vân</td>
-                <td>Thực hiện bài tập cá nhân và hỗ trợ hoàn thiện bài tập nhóm</td>
-            </tr>
-            <tr>
-                <td>Phạm Trường Phát</td>
-                <td>Không tham gia đóng góp</td>
-            </tr>
-            <tr>
-                <td>Dương Khắc Huy</td>
-                <td>Không tham gia đóng góp</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- 5. Form liên hệ -->
-    <h2>Form liên hệ</h2>
-    <form action="#" method="post">
-        <p>
-            <label for="fullname">Họ và tên:</label><br>
-            <input type="text" id="fullname" name="fullname" placeholder="Nhập tên của bạn...">
-        </p>
-        <p>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
-            <input type="submit" value="Gửi tin nhắn">
-        </p>
-    </form>
-
-    <br>
-    <p><a href="../../index.html">← Quay lại trang chủ</a></p>
+        <!-- Thành viên 4 -->
+        <div class="member-card">
+            <div class="member-info">
+                <h3>Dương Khắc Huy</h3>
+                <p>Hiện chưa có thông tin đóng góp cho dự án này.</p>
+                <a href="../huydk/index.html" class="btn-link">Xem trang cá nhân &rarr;</a>
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>
