@@ -1,42 +1,103 @@
+/* ==========================================
+   1. KIỂU DÁNG CHUNG (Tự động áp dụng cho cả 2 trang)
+   ========================================== */
 body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    margin: 0;
+    line-height: 1.6;
 }
 
-h1 {
-    color: #333;
+header {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
 }
 
-.task-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.task-list a {
+nav {
+    background-color: #1e293b;
+    text-align: center;
     padding: 10px;
-    background: white;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   2. TRANG TRÍ RIÊNG CHO TRANG CHỦ (.home-page)
+   ========================================== */
+/* Điểm nhấn viền màu xanh dương phía trên khung nội dung */
+.home-page main {
+    border-top: 5px solid #0284c7;
+}
+
+/* Hình ảnh trên trang chủ có hiệu ứng phóng to nhẹ khi di chuột */
+.home-page main img {
     border-radius: 8px;
-    text-decoration: none;
-    color: #333;
-    transition: 0.2s;
+    transition: transform 0.3s ease;
 }
 
-.task-list a:hover {
-    background: #007BFF;
-    color: white;
+.home-page main img:hover {
+    transform: scale(1.03);
 }
 
-.btn {
+/* ==========================================
+   3. TRANG TRÍ RIÊNG CHO TRANG GIỚI THIỆU (.about-page)
+   ========================================== */
+/* Điểm nhấn viền màu xanh lá phía trên khung nội dung */
+.about-page main {
+    border-top: 5px solid #10b981;
+}
+
+/* Đoạn văn trích dẫn hoặc giới thiệu bản thân được tạo khung làm nổi bật */
+.about-page blockquote, 
+.about-page .intro-box {
+    background-color: #ecfdf5;
+    border-left: 4px solid #10b981;
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #065f46;
+}
+/* Khoảng cách biệt lập giữa các thành viên */
+.member-card {
+    margin-bottom: 45px;       /* Đẩy thành viên phía dưới ra xa 45px */
+    padding: 20px;              /* Khoảng trống bên trong khung */
+    background-color: #ffffff;  /* Nền trắng */
+    border-radius: 8px;         /* Bo tròn nhẹ góc khung */
+    border-bottom: 2px solid #e2e8f0; /* Đường gạch ngang phân cách nhạt */
+}
+
+/* Khoảng cách giữa các dòng chữ bên trong từng người */
+.member-card h3 {
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.member-card p {
+    margin: 6px 0;             /* Giãn nhẹ dòng MSSV và Mô tả */
+}
+
+.member-card a {
     display: inline-block;
-    padding: 10px 15px;
-    background: #ff6600;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.btn:hover {
-    background: #cc5200;
+    margin-top: 10px;          /* Đẩy nút 'Xem trang cá nhân' xuống một chút */
 }
