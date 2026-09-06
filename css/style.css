@@ -195,3 +195,33 @@ body {
     opacity: 1;
     transform: translateX(4px);
 }
+/* ==========================================================
+   TÔNG MÀU XÁM DÀNH RIÊNG CHO TRANG CỦA VÂN (.theme-gray)
+   ========================================================== */
+
+/* Viền ảnh avatar chuyển sang màu xám Slate */
+.theme-gray .profile-avatar {
+    border-color: #475569;
+}
+
+/* Tiêu đề các mục chuyển từ xanh sang màu xám đậm */
+.theme-gray .profile-section h2 {
+    color: #334155;
+}
+
+/* Nút quay lại chuyển sang màu xám */
+.theme-gray .back-link {
+    color: #475569;
+}
+
+.theme-gray .back-link:hover {
+    color: #0f172a;
+}
+
+/* Đảm bảo toàn bộ chữ mô tả giữ nét chữ thường */
+.theme-gray p, 
+.theme-gray li, 
+.theme-gray span {
+    font-weight: normal;
+    color: #334155;
+}

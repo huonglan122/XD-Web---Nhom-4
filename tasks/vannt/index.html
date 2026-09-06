@@ -2,33 +2,54 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Nguyễn Thanh Vân</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thanh Vân - Trang Cá Nhân</title>
+    <!-- Đường dẫn lùi 2 cấp về file CSS dùng chung -->
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 
-    <h1>Nguyễn Thanh Vân</h1>
-  
-    <h2>Thông tin cá nhân</h2>
-    <img src="avatar.jpg" alt="Ảnh đại diện của Nguyễn Thanh Vân" width="200">
+    <!-- Thêm class "theme-gray" để áp dụng tone màu xám -->
+    <main class="profile-container theme-gray">
+        <!-- Nút quay lại trang chủ -->
+        <a href="../../index.html" class="back-link">&larr; Quay lại trang chủ</a>
 
-    <p>MSSV: 24106689</p> 
-    <p>Lớp: FIDT3.2410.2</p> 
-    <p>Ngành: Thương mại điện tử</p> 
-    <p>Ngày sinh: 04/06/2006</p> 
-    <p>Giới tính: Nữ</p>
-    
-    
-    <h2>Sở thích</h2> 
-<ul> 
-        <li>Nghe nhạc</li> 
-        <li>Vận động</li> 
-        <li>Du lịch</li> 
-</ul>
-  
-    <h2>Sở trường</h2>
-    <p> Kỹ năng làm việc nhóm. </p>
+        <div class="profile-card">
+            <!-- Ảnh đại diện và Họ tên -->
+            <header class="profile-header">
+                <img src="avatar.jpg" alt="Nguyễn Thanh Vân" class="profile-avatar">
+                <h1>Nguyễn Thanh Vân</h1>
+            </header>
 
-    <p><a href="../../index.html">← Quay lại trang chủ</a></p>
+            <!-- Thông tin cá nhân -->
+            <section class="profile-section">
+                <h2>Thông tin cá nhân</h2>
+                <div class="info-grid">
+                    <p><span>MSSV:</span> 24106689</p>
+                    <p><span>Tính cách:</span> Có trách nhiệm</p>
+                    <p><span>Sở thích chính:</span> Thể thao, Du lịch</p>
+                </div>
+            </section>
 
-</body> 
+            <!-- Sở thích -->
+            <section class="profile-section">
+                <h2>Sở thích</h2>
+                <ul>
+                    <li>Thích tham gia các hoạt động thể thao rèn luyện sức khỏe</li>
+                    <li>Đam mê du lịch và trải nghiệm những vùng đất mới</li>
+                </ul>
+            </section>
+
+            <!-- Sở trường & Điểm mạnh -->
+            <section class="profile-section">
+                <h2>Sở trường & Điểm mạnh</h2>
+                <ul>
+                    <li>Có tinh thần trách nhiệm cao trong công việc nhóm</li>
+                    <li>Chủ động, luôn hoàn thành bài tập đúng hạn</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+</body>
 </html>
